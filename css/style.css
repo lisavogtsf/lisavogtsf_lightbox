@@ -8,8 +8,16 @@ body {
   text-align: center;
 }
 #thumbnails {
+  margin: 0 20% 10px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+#thumbnails .mini {
+  background-color: teal;
+  height: 40px;
+  width: 60px;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
