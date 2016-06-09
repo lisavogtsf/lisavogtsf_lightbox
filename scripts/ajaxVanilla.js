@@ -1,1 +1,0 @@
-ajaxVanilla.js
