@@ -5,6 +5,9 @@ var config = require('./config');
 
 var app = express();
 
+var flickrApiKey = config('FLICKR_KEY');
+console.log("flickrApiKey", flickrApiKey);
+
 // set up view engine
 app.set('view engine', 'ejs');
 

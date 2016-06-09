@@ -7,7 +7,9 @@ if (ENV === 'development') {
 
 var config = {
   ENV: process.env.NODE_ENV,
-  PORT: process.env.PORT
+  PORT: process.env.PORT,
+  FLICKR_KEY: process.env.FLICKR_KEY,
+  FLICKR_SECRET: process.env.FLICKR_SECRET
 }
 
 module.exports = function (key) {
