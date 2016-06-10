@@ -48,7 +48,6 @@ app.get('/', function (req, res) {
 				photoUrls[i] = photoUrl;
 			}
 
-			console.log(photos[0]);
 			// send those photos to render
 			res.render('index', {photos: photos, photoUrls: photoUrls, limit: limit});
 		}
