@@ -1,3 +1,5 @@
+@frameColor: #101010;
+
 @import url(https://fonts.googleapis.com/css?family=Telex);
 
 body {
@@ -20,12 +22,32 @@ header {
 	flex-wrap: wrap;
 
 	.thumbnail {
-		width: 20%;
-		height: 100px;
+		.aspect-ratio(1, 1);
+		width: 15%;
 		margin: 5px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: @frameColor;
+		border: @frameColor 5px solid;
 	}
 }
 
-#viewer {
 
+// aspect ratio mixin
+.aspect-ratio(@width, @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+  }
+  > .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

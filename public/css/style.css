@@ -14,9 +14,27 @@ body {
   flex-wrap: wrap;
 }
 #thumbnail-grid .thumbnail {
-  width: 20%;
-  height: 100px;
+  position: relative;
+  width: 15%;
   margin: 5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #101010;
+  border: #101010 5px solid;
+}
+#thumbnail-grid .thumbnail:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+#thumbnail-grid .thumbnail > .thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

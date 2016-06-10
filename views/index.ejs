@@ -25,7 +25,7 @@
 				<% photoUrl += ".staticflickr.com/" + photo.server; %>
 				<% photoUrl += "/" + photo.id; %>
 				<% photoUrl += "_" + photo.secret + ".jpg"; %>
-				<img src="<%= photoUrl %>" alt="<%= photo.title %>" class="thumbnail">
+				<div style="background-image:url(<%= photoUrl %>);" alt="<%= photo.title %>" class="thumbnail"></div>
 			<% }); %>
 
 		</article>
