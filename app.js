@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
 		if ((xhr.readyState === 4) && (xhr.status === 200)) {
 			var data = JSON.parse(xhr.responseText);
 			var photos = data.photos.photo;
-			console.log("photos", photos);
+			console.log(photos[0]);
 			// send those photos to render
 			res.render('index', {photos: photos});
 		}

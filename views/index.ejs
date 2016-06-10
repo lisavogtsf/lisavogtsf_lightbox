@@ -10,12 +10,6 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 
-		<!-- load scripts -->
-		<!-- jquery for ajax testing -->
-		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-		<script src="scripts/index.js"></script>
-
 	</head>
 <body>
 
@@ -24,14 +18,14 @@
 	</header>
 
 	<section>
-		<article id="thumbnails">
+		<article id="thumbnail-grid">
 			<!-- load thumbnails from API here -->
 			<% photos.forEach(function (photo) { %>
 				<% var photoUrl = "https://farm" + photo.farm; %>
 				<% photoUrl += ".staticflickr.com/" + photo.server; %>
 				<% photoUrl += "/" + photo.id; %>
 				<% photoUrl += "_" + photo.secret + ".jpg"; %>
-				<img src="<%= photoUrl %>" alt="">
+				<img src="<%= photoUrl %>" alt="<%= photo.title %>" class="thumbnail">
 			<% }); %>
 
 		</article>
