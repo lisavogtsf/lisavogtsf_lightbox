@@ -26,6 +26,14 @@
 	<section>
 		<article id="thumbnails">
 			<!-- load thumbnails from API here -->
+			<% photos.forEach(function (photo) { %>
+				<% var photoUrl = "https://farm" + photo.farm; %>
+				<% photoUrl += ".staticflickr.com/" + photo.server; %>
+				<% photoUrl += "/" + photo.id; %>
+				<% photoUrl += "_" + photo.secret + ".jpg"; %>
+				<img src="<%= photoUrl %>" alt="">
+			<% }); %>
+
 		</article>
 
 		<article id="viewer">
