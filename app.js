@@ -35,9 +35,22 @@ app.get('/', function (req, res) {
 		if ((xhr.readyState === 4) && (xhr.status === 200)) {
 			var data = JSON.parse(xhr.responseText);
 			var photos = data.photos.photo;
+			var photoUrls =[];
+
+			for (var i = 0; i < limit; i++) {
+				var photo = photos[i];
+
+				var photoUrl = "https://farm" + photo.farm;
+				photoUrl += ".staticflickr.com/" + photo.server;
+				photoUrl += "/" + photo.id;
+				photoUrl += "_" + photo.secret + ".jpg";
+
+				photoUrls[i] = photoUrl;
+			}
+
 			console.log(photos[0]);
 			// send those photos to render
-			res.render('index', {photos: photos, limit: limit});
+			res.render('index', {photos: photos, photoUrls: photoUrls, limit: limit});
 		}
 	};
 	xhr.send();
