@@ -7,14 +7,14 @@ body {
   color: ivory;
   text-align: center;
 }
-#thumbnail-grid {
+#thumbnail-frame {
   z-index: 0;
   margin: 0 10% 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#thumbnail-grid .thumbnail {
+#thumbnail-frame .thumbnail {
   position: relative;
   width: 15%;
   margin: 5px;
@@ -24,13 +24,13 @@ body {
   background-color: #101010;
   border: #101010 5px solid;
 }
-#thumbnail-grid .thumbnail:before {
+#thumbnail-frame .thumbnail:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 100%;
 }
-#thumbnail-grid .thumbnail > .thumbnail {
+#thumbnail-frame .thumbnail > .thumbnail {
   position: absolute;
   top: 0;
   left: 0;
@@ -46,15 +46,21 @@ body {
   left: 10%;
   right: 10%;
   width: 80%;
+  padding: 2% 0;
 }
 #viewer-frame.hide {
   display: none;
 }
 #viewer-frame #viewer {
-  background-color: teal;
+  background-color: #101010;
   position: relative;
-  width: 100px;
-  height: 100px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 5% auto;
+}
+footer {
+  margin: 20px auto 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

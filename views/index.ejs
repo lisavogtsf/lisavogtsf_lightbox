@@ -21,7 +21,7 @@
 	</header>
 
 	<section>
-		<article id="thumbnail-grid">
+		<article id="thumbnail-frame">
 			<!-- load thumbnails from API here -->
 			<% for (var i = 0; i < photoUrls.length; i++) { %>
 
@@ -30,7 +30,7 @@
 
 		</article>
 
-		<article id="viewer-frame" class="hide">
+		<article id="viewer-frame" class="hide" onclick="closeLightbox();">
 			<!-- when thumbnails is clicked, show a large version here -->
 			<!-- with the ability to move to the next / previous photos and display the photo title -->
 			<div id="viewer"></div>
