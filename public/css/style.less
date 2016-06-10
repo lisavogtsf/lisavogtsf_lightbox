@@ -16,8 +16,8 @@ body {
 	z-index: 0;
 	margin: 0 10% 10px;
 	display: flex;
-	justify-content: space-between;
-	align-content: space-between;
+	justify-content: space-around;
+	align-content: space-around;
 	flex-wrap: wrap;
 
 	.thumbnail {
@@ -37,13 +37,9 @@ body {
 	}
 	display: block;
 	z-index: 1;
+	margin: 0 10% 10px;
 	background-color: @frameColor;
 	position: absolute;
-	top: 10%;
-	left: 10%;
-	right: 10%;
-	width: 80%;
-	padding: 2% 0;
 
 	#viewer {
 		background-color: @frameColor;
@@ -93,6 +89,10 @@ footer {
 			margin: 1%;
 		}
 	}	
+
+	#viewer-frame {
+		margin: 0 7% 10px;
+	}
 }
 
 // seven thumbnails across
@@ -107,6 +107,10 @@ footer {
 			margin: 1%;
 		}
 	}	
+
+	#viewer-frame {
+		margin: 0 7% 10px;
+	}
 }
 
 // standard is five thumbnails across 600-1024
@@ -115,6 +119,10 @@ footer {
 		.thumbnail {
 			width: 16%;
 			margin: 2%;
+		}
+
+		#viewer-frame {
+			margin: 0 7% 10px;
 		}
 	}*/
 
@@ -129,7 +137,11 @@ footer {
 			width: 29%;
 			margin: 2%;
 		}
-	}	
+	}
+
+	#viewer-frame {
+		margin: 0 7% 10px;
+	}
 }
 
 // two thumbnails across
@@ -142,5 +154,9 @@ footer {
 			width: 40%;
 			margin: 5%;
 		}
+	}
+
+	#viewer-frame {
+		margin: 0 5% 10px;
 	}
 }

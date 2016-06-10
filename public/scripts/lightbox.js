@@ -18,7 +18,9 @@ function openLightbox (e, photoUrls) {
 
 	// show whole frame
 	console.log(thumbnailFrame.getBoundingClientRect());
-	viewerFrame.style.height = thumbnailFrame.getBoundingClientRect().height + "px";
+	// viewerFrame.style.height = thumbnailFrame.getBoundingClientRect().height + "px";
+	viewerFrame.style.width = thumbnailFrame.getBoundingClientRect().width + "px";
+	viewerFrame.style.top = thumbnailFrame.getBoundingClientRect().top + "px";
 	viewerFrame.classList.remove('hide');
 }
 

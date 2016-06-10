@@ -11,8 +11,8 @@ body {
   z-index: 0;
   margin: 0 10% 10px;
   display: flex;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-around;
+  align-content: space-around;
   flex-wrap: wrap;
 }
 #thumbnail-frame .thumbnail {
@@ -40,13 +40,9 @@ body {
 #viewer-frame {
   display: block;
   z-index: 1;
+  margin: 0 10% 10px;
   background-color: #101010;
   position: absolute;
-  top: 10%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  padding: 2% 0;
 }
 #viewer-frame.hide {
   display: none;
@@ -71,6 +67,9 @@ footer {
     width: 150px;
     margin: 1%;
   }
+  #viewer-frame {
+    margin: 0 7% 10px;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   #thumbnail-frame {
@@ -80,12 +79,19 @@ footer {
     width: 11%;
     margin: 1%;
   }
+  #viewer-frame {
+    margin: 0 7% 10px;
+  }
 }
 /*	#thumbnail-frame {
 		margin: 0 10% 10px;
 		.thumbnail {
 			width: 16%;
 			margin: 2%;
+		}
+
+		#viewer-frame {
+			margin: 0 7% 10px;
 		}
 	}*/
 @media screen and (min-width: 480px) and (max-width: 600px) {
@@ -96,6 +102,9 @@ footer {
     width: 29%;
     margin: 2%;
   }
+  #viewer-frame {
+    margin: 0 7% 10px;
+  }
 }
 @media screen and (max-width: 480px) {
   #thumbnail-frame {
@@ -104,6 +113,9 @@ footer {
   #thumbnail-frame .thumbnail {
     width: 40%;
     margin: 5%;
+  }
+  #viewer-frame {
+    margin: 0 5% 10px;
   }
 }
 
