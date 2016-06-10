@@ -20,13 +20,14 @@
 	<section>
 		<article id="thumbnail-grid">
 			<!-- load thumbnails from API here -->
-			<% photos.forEach(function (photo) { %>
+			<% for (var i = 0; i < limit; i++) { %>
+				<% var photo = photos[i]; %>
 				<% var photoUrl = "https://farm" + photo.farm; %>
 				<% photoUrl += ".staticflickr.com/" + photo.server; %>
 				<% photoUrl += "/" + photo.id; %>
 				<% photoUrl += "_" + photo.secret + ".jpg"; %>
 				<div style="background-image:url(<%= photoUrl %>);" alt="<%= photo.title %>" class="thumbnail"></div>
-			<% }); %>
+			<% } %>
 
 		</article>
 

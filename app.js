@@ -20,6 +20,7 @@ app.get('/', function (req, res) {
 	var defaultSearchTerm = "cats";
 	var searchTerm = searchTerm || defaultSearchTerm;
 	var defaultSearchLimit = 25;
+	var limit = limit || defaultSearchLimit;
 
 	// put together search url
 	var flickrSearchUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json";
@@ -36,7 +37,7 @@ app.get('/', function (req, res) {
 			var photos = data.photos.photo;
 			console.log(photos[0]);
 			// send those photos to render
-			res.render('index', {photos: photos});
+			res.render('index', {photos: photos, limit: limit});
 		}
 	};
 	xhr.send();
