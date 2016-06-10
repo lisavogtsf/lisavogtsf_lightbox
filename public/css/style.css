@@ -10,7 +10,7 @@ body {
 #thumbnail-grid {
   margin: 0 10% 10px;
   display: flex;
-  justify-content: space-between right;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 #thumbnail-grid .thumbnail {
