@@ -1,4 +1,5 @@
 css/style.css.map
 assignment.md
 node_modules/*
-.env
+/*.env
+.DS_Store
