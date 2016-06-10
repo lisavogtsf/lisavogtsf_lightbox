@@ -37,12 +37,24 @@ body {
   right: 0;
   bottom: 0;
 }
-#viewer {
+#viewer-frame {
   display: block;
   z-index: 1;
+  background-color: #101010;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
 }
-#viewer.hide {
+#viewer-frame.hide {
   display: none;
+}
+#viewer-frame #viewer {
+  background-color: teal;
+  position: relative;
+  width: 100px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

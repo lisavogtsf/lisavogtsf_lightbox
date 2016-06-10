@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 
+		<!-- load scripts for dom interaction -->
+		<script src="scripts/lightbox.js"></script>
+
 	</head>
 <body>
 
@@ -22,15 +25,15 @@
 			<!-- load thumbnails from API here -->
 			<% for (var i = 0; i < photoUrls.length; i++) { %>
 
-				<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" class="thumbnail"></div>
+				<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" onclick="openLightbox(event);"></div>
 			<% } %>
 
 		</article>
 
-		<article id="viewer">
-		<article id="viewer" class="hide">
+		<article id="viewer-frame" class="hide">
 			<!-- when thumbnails is clicked, show a large version here -->
 			<!-- with the ability to move to the next / previous photos and display the photo title -->
+			<div id="viewer"></div>
 		</article>
 	</section>
 
