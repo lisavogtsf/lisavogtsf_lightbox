@@ -1,9 +1,10 @@
+@primaryBackgroundColor: #000000;
 @frameColor: #101010;
 
 @import url(https://fonts.googleapis.com/css?family=Telex);
 
 body {
-	background-color: black;
+	background-color: @primaryBackgroundColor;
 	margin: 0 auto;
 	padding: 10px;
 	font-family: 'Telex', sans-serif;
@@ -16,17 +17,17 @@ body {
 	margin: 0 10% 10px;
 	display: flex;
 	justify-content: space-between;
+	align-content: space-between;
 	flex-wrap: wrap;
 
 	.thumbnail {
 		.aspect-ratio(1, 1);
-		width: 15%;
-		margin: 5px;
+		width: 16%;
+		margin: 2%;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: @frameColor;
-		border: @frameColor 5px solid;
 	}
 }
 
@@ -76,4 +77,70 @@ footer {
     right: 0;
     bottom: 0;
   }
+}
+
+
+// media queries
+
+// max thumbnail size, as many as fit
+@media screen 
+	and (min-width: 1440px) {
+	
+	#thumbnail-frame {
+		margin: 0 7% 10px;	
+		.thumbnail {
+			width: 150px;
+			margin: 1%;
+		}
+	}	
+}
+
+// seven thumbnails across
+@media screen 
+	and (min-width: 1024px)
+	and (max-width: 1440px) {
+	
+	#thumbnail-frame {
+		margin: 0 7% 10px;	
+		.thumbnail {
+			width: 11%;
+			margin: 1%;
+		}
+	}	
+}
+
+// standard is five thumbnails across 600-1024
+/*	#thumbnail-frame {
+		margin: 0 10% 10px;
+		.thumbnail {
+			width: 16%;
+			margin: 2%;
+		}
+	}*/
+
+// three thumbnails across
+@media screen 
+	and (min-width: 480px)
+	and (max-width: 600px) {
+	
+	#thumbnail-frame {
+		margin: 0 7% 10px;	
+		.thumbnail {
+			width: 29%;
+			margin: 2%;
+		}
+	}	
+}
+
+// two thumbnails across
+@media screen 
+	and (max-width: 480px) {
+	
+	#thumbnail-frame {
+		margin: 0 5% 10px;	
+		.thumbnail {
+			width: 40%;
+			margin: 5%;
+		}
+	}
 }
