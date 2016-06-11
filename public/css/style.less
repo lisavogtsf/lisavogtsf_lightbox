@@ -5,6 +5,9 @@
 @import url(https://fonts.googleapis.com/css?family=Telex);
 
 body {
+	background-color: @primaryBackgroundColor;
+	min-height: 100%;
+	margin: 0;
 	font-family: 'Telex', sans-serif;
 	color: @accentColor;
 	text-align: center;
@@ -61,8 +64,8 @@ body {
 	#viewer-frame {
 		z-index: 1;
 		display: block;
-		height: 80%;
-		width: 80%;
+		height: 90%;
+		width: 90%;
 		position: relative;
 		text-align: center;
 		vertical-align: middle;
@@ -217,6 +220,9 @@ body {
 
 	#lightbox {
 		#viewer-frame {
+			margin: 2% 5%;
+			height: 76%;
+			
 			#close {
 				position: relative;
 			}
@@ -252,6 +258,37 @@ body {
 
 	#lightbox {
 		#viewer-frame {
+			margin: 2% 5%;
+			height: 76%;
+
+			#close {
+				position: relative;
+			}
+
+			nav {
+				position: relative;
+			}
+			
+			button {
+				&#close,
+				&#previous,
+				&#next {
+					background-color: @primaryBackgroundColor;
+				}
+			}
+		}
+	}
+}
+
+// flip buttons out for short screens
+@media screen 
+	and (max-height: 600px) {
+
+	#lightbox {
+		#viewer-frame {
+			margin: 2% 5%;
+			height: 76%;
+
 			#close {
 				position: relative;
 			}
