@@ -141,16 +141,18 @@ body {
 @media screen 
 	and (min-width: 1440px) {
 	
-	#thumbnail-frame {
-		margin: 0 7% 10px;	
-		.thumbnail {
-			width: 150px;
-			margin: 1%;
-		}
-	}	
+	#main {
+		#thumbnail-frame {
+			margin: 0 7% 10px;	
+			.thumbnail {
+				width: 150px;
+				margin: 1%;
+			}
+		}	
 
-	#viewer-frame {
-		margin: 0 7% 10px;
+		#viewer-frame {
+			margin: 0 7% 10px;
+		}
 	}
 }
 
@@ -159,63 +161,76 @@ body {
 	and (min-width: 1024px)
 	and (max-width: 1440px) {
 	
-	#thumbnail-frame {
-		margin: 0 7% 10px;	
-		.thumbnail {
-			width: 11%;
-			margin: 1%;
-		}
-	}	
-
-	#viewer-frame {
-		margin: 0 7% 10px;
-	}
-}
-
-// standard is five thumbnails across 600-1024
-/*	#thumbnail-frame {
-		margin: 0 10% 10px;
-		.thumbnail {
-			width: 16%;
-			margin: 2%;
-		}
+	#main {
+		#thumbnail-frame {
+			margin: 0 7% 10px;	
+			.thumbnail {
+				width: 11%;
+				margin: 1%;
+			}
+		}	
 
 		#viewer-frame {
 			margin: 0 7% 10px;
 		}
-	}*/
+	}
+}
+
+// standard is five thumbnails across 600-1024
+@media screen 
+	and (min-width: 600px)
+	and (max-width: 1024px) {
+
+	#main {
+		#thumbnail-frame {
+			margin: 0 10% 10px;
+			.thumbnail {
+				width: 16%;
+				margin: 2%;
+			}
+
+			#viewer-frame {
+				margin: 0 7% 10px;
+			}
+		}
+	}
+} 
 
 // three thumbnails across
 @media screen 
 	and (min-width: 480px)
 	and (max-width: 600px) {
 	
-	#thumbnail-frame {
-		margin: 0 7% 10px;	
-		.thumbnail {
-			width: 29%;
-			margin: 2%;
+	#main {
+		#thumbnail-frame {
+			margin: 0 7% 10px;	
+			.thumbnail {
+				width: 29%;
+				margin: 2%;
+			}
 		}
-	}
 
-	#viewer-frame {
-		margin: 0 7% 10px;
-	}
+		#viewer-frame {
+			margin: 0 7% 10px;
+		}
+	}	
 }
 
 // two thumbnails across
 @media screen 
 	and (max-width: 480px) {
 	
-	#thumbnail-frame {
-		margin: 0 5% 10px;	
-		.thumbnail {
-			width: 40%;
-			margin: 5%;
+	#main {
+		#thumbnail-frame {
+			margin: 0 5% 10px;	
+			.thumbnail {
+				width: 40%;
+				margin: 5%;
+			}
 		}
-	}
 
-	#viewer-frame {
-		margin: 0 5% 10px;
+		#viewer-frame {
+			margin: 0 5% 10px;
+		}
 	}
 }
