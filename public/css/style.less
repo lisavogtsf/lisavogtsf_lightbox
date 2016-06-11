@@ -199,7 +199,7 @@ body {
 	}
 } 
 
-// three thumbnails across
+// three thumbnails across and flip buttons out
 @media screen 
 	and (min-width: 480px)
 	and (max-width: 600px) {
@@ -242,7 +242,7 @@ body {
 	}
 }
 
-// two thumbnails across
+// two thumbnails across and flip buttons out
 @media screen 
 	and (max-width: 480px) {
 	
@@ -288,6 +288,34 @@ body {
 		#viewer-frame {
 			margin: 2% 5%;
 			height: 76%;
+
+			#close {
+				position: relative;
+			}
+
+			nav {
+				position: relative;
+			}
+			
+			button {
+				&#close,
+				&#previous,
+				&#next {
+					background-color: @primaryBackgroundColor;
+				}
+			}
+		}
+	}
+}
+
+// flip buttons out for super short/landscape screens
+@media screen 
+	and (max-height: 480px) {
+
+	#lightbox {
+		#viewer-frame {
+			margin: 2% 5%;
+			height: 65%;
 
 			#close {
 				position: relative;

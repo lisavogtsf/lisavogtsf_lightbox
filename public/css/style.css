@@ -216,5 +216,22 @@ body {
     background-color: #000000;
   }
 }
+@media screen and (max-height: 480px) {
+  #lightbox #viewer-frame {
+    margin: 2% 5%;
+    height: 65%;
+  }
+  #lightbox #viewer-frame #close {
+    position: relative;
+  }
+  #lightbox #viewer-frame nav {
+    position: relative;
+  }
+  #lightbox #viewer-frame button#close,
+  #lightbox #viewer-frame button#previous,
+  #lightbox #viewer-frame button#next {
+    background-color: #000000;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
