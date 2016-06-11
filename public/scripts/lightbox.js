@@ -1,23 +1,20 @@
 // scripts for lightbox page dom interaction
-console.log("lightbox.js");
 
-function openLightbox (e, photoUrls) {
+function openLightbox (e) {
 
 	// gather elements
 	var main = document.querySelector('#main');
 	var lightbox = document.querySelector('#lightbox');
-
-	// var viewerFrame = document.querySelector('#viewer-frame');
 	var viewer = document.querySelector('#viewer');
-	// var thumbnailFrame = document.querySelector('#thumbnail-frame');
 	
 	// gather thumbnail background/order
 	var currentBackgroundImage = e.target.style.backgroundImage;
-	var photoOrder = e.target.dataset.order;
+	var dataOrder = e.target.dataset.order;
+
 
 	// add target photo/order to viewer
 	viewer.style.backgroundImage = currentBackgroundImage;
-	viewer.dataset.order = photoOrder;
+	viewer.dataset.order = dataOrder;
 
 	// show/hide articles
 	lightbox.classList.remove('hide');
@@ -29,8 +26,6 @@ function closeLightbox () {
 	// gather elements
 	var main = document.querySelector('#main');
 	var lightbox = document.querySelector('#lightbox');
-
-	var viewerFrame = document.querySelector('#viewer-frame');
 	var viewer = document.querySelector('#viewer');
 
 	// clear out viewer
@@ -42,18 +37,30 @@ function closeLightbox () {
 	lightbox.classList.add('hide');
 }
 
-function previousPhoto (e) {
+function changePhoto (n) {
 
-	// get data order from target
+	// get elements to use
+	var viewer = document.querySelector('#viewer');
+	var thumbnails = document.querySelectorAll('.thumbnail');
+	var thumbLength = thumbnails.length;
 
-	// subtract 1
+	// get data order from current viewer and add n for prev/next, update
+	var dataOrder = parseInt(viewer.dataset.order);
+	dataOrder += parseInt(n);
+	if (dataOrder < 0) {
+		dataOrder += thumbLength;
+	}
+	dataOrder = dataOrder % thumbLength;
+	viewer.dataset.order = dataOrder;
 
 	// find the thumbnail with with that data order
-
 	// get its background image, set it in the viewer, set its order 
-
-}
-
-function nextPhoto (e) {
-
+	for (var i = 0; i < thumbLength; i++) {
+		var thumb = thumbnails[i];
+		if (parseInt(thumb.dataset.order) === dataOrder) {		
+			viewer.style.backgroundImage = thumb.style.backgroundImage;
+			return;
+		}
+	}
+	console.error("selected photo not found");
 }
