@@ -33,8 +33,6 @@ function closeLightbox () {
 	var viewerFrame = document.querySelector('#viewer-frame');
 	var viewer = document.querySelector('#viewer');
 
-	// hide whole frame
-	viewerFrame.classList.add('hide');
 	// clear out viewer
 	viewer.style.backgroundImage = "";
 	viewer.dataset.order = "";
@@ -42,4 +40,20 @@ function closeLightbox () {
 	// show/hide articles
 	main.classList.remove('hide');
 	lightbox.classList.add('hide');
+}
+
+function previousPhoto (e) {
+
+	// get data order from target
+
+	// subtract 1
+
+	// find the thumbnail with with that data order
+
+	// get its background image, set it in the viewer, set its order 
+
+}
+
+function nextPhoto (e) {
+
 }

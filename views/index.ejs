@@ -36,12 +36,12 @@
 		<article id="lightbox" class="hide">
 			<!-- when thumbnails is clicked, show a large version here -->
 			<!-- with the ability to move to the next / previous photos and display the photo title -->
-			<div id="viewer-frame" onclick="closeLightbox();">
-				<button id="close">X</button>
+			<div id="viewer-frame">
+				<button id="close" onclick="closeLightbox();">X</button>
 				<div id="viewer"></div>
 				<nav>
-					<button id="previous">previous</button>
-					<button id="next">next</button>
+					<button id="previous" onclick="previousPhoto(event);">previous</button>
+					<button id="next" onclick="nextPhoto(event);">next</button>
 				</nav>
 			</div>
 		</article>
