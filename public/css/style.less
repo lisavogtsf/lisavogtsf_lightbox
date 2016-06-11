@@ -215,7 +215,25 @@ body {
 		}
 	}
 
+	#lightbox {
+		#viewer-frame {
+			#close {
+				position: relative;
+			}
 
+			nav {
+				position: relative;
+			}
+			
+			button {
+				&#close,
+				&#previous,
+				&#next {
+					background-color: @primaryBackgroundColor;
+				}
+			}
+		}
+	}
 }
 
 // two thumbnails across
@@ -249,7 +267,6 @@ body {
 					background-color: @primaryBackgroundColor;
 				}
 			}
-
 		}
 	}
 }
