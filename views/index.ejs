@@ -3,6 +3,7 @@
 	<head>
     <meta charset="utf-8">
     <meta name="description" content="a javascript-only lightbox for the Slack front end challenge">
+    <meta name="keywords" content="<%= searchTerm %>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>lisavogtsf lightbox</title>
@@ -25,7 +26,7 @@
 				<!-- load thumbnails from API here -->
 				<% for (var i = 0; i < photoUrls.length; i++) { %>
 
-					<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" onclick="openLightbox(event);"></div>
+					<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-title="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" onclick="openLightbox(event);"></div>
 				<% } %>
 			</div>
 			<footer>
@@ -41,6 +42,7 @@
 				<div id="viewer"></div>
 				<nav>
 					<button id="previous" onclick="changePhoto(-1);">previous</button>
+					<h2></h2>
 					<button id="next" onclick="changePhoto(1);">next</button>
 				</nav>
 			</div>

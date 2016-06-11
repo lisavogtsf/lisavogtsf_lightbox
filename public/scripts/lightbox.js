@@ -6,15 +6,17 @@ function openLightbox (e) {
 	var main = document.querySelector('#main');
 	var lightbox = document.querySelector('#lightbox');
 	var viewer = document.querySelector('#viewer');
+	var navTitle = document.querySelector('#viewer-frame nav h2');
 	
 	// gather thumbnail background/order
 	var currentBackgroundImage = e.target.style.backgroundImage;
 	var dataOrder = e.target.dataset.order;
-
+	var title = e.target.dataset.title;
 
 	// add target photo/order to viewer
 	viewer.style.backgroundImage = currentBackgroundImage;
 	viewer.dataset.order = dataOrder;
+	navTitle.textContent = title;
 
 	// show/hide articles
 	lightbox.classList.remove('hide');
@@ -27,10 +29,12 @@ function closeLightbox () {
 	var main = document.querySelector('#main');
 	var lightbox = document.querySelector('#lightbox');
 	var viewer = document.querySelector('#viewer');
+	var navTitle = document.querySelector('#viewer-frame nav h2');
 
 	// clear out viewer
 	viewer.style.backgroundImage = "";
 	viewer.dataset.order = "";
+	navTitle.textContent = "";
 
 	// show/hide articles
 	main.classList.remove('hide');
@@ -43,6 +47,7 @@ function changePhoto (n) {
 	var viewer = document.querySelector('#viewer');
 	var thumbnails = document.querySelectorAll('.thumbnail');
 	var thumbLength = thumbnails.length;
+	var navTitle = document.querySelector('#viewer-frame nav h2');
 
 	// get data order from current viewer and add n for prev/next, update
 	var dataOrder = parseInt(viewer.dataset.order);
@@ -59,6 +64,7 @@ function changePhoto (n) {
 		var thumb = thumbnails[i];
 		if (parseInt(thumb.dataset.order) === dataOrder) {		
 			viewer.style.backgroundImage = thumb.style.backgroundImage;
+			navTitle.textContent = thumb.dataset.title;
 			return;
 		}
 	}

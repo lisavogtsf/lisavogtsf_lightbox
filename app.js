@@ -49,7 +49,7 @@ app.get('/', function (req, res) {
 			}
 
 			// send those photos to render
-			res.render('index', {photos: photos, photoUrls: photoUrls, limit: limit});
+			res.render('index', {photos: photos, photoUrls: photoUrls, limit: limit, searchTerm: searchTerm});
 		}
 	};
 	xhr.send();
