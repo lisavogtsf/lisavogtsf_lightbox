@@ -80,7 +80,7 @@ body {
 		#close {
 			display: block;
 			position: absolute;
-			right: 0;
+			left: 0;
 			top: 0;
 		}
 
@@ -213,7 +213,9 @@ body {
 		#viewer-frame {
 			margin: 0 7% 10px;
 		}
-	}	
+	}
+
+
 }
 
 // two thumbnails across
@@ -228,9 +230,26 @@ body {
 				margin: 5%;
 			}
 		}
+	}
 
+	#lightbox {
 		#viewer-frame {
-			margin: 0 5% 10px;
+			#close {
+				position: relative;
+			}
+
+			nav {
+				position: relative;
+			}
+			
+			button {
+				&#close,
+				&#previous,
+				&#next {
+					background-color: @primaryBackgroundColor;
+				}
+			}
+
 		}
 	}
 }

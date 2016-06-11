@@ -81,7 +81,7 @@ body {
 #lightbox #viewer-frame #close {
   display: block;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 #lightbox #viewer-frame nav {
@@ -165,8 +165,16 @@ body {
     width: 40%;
     margin: 5%;
   }
-  #main #viewer-frame {
-    margin: 0 5% 10px;
+  #lightbox #viewer-frame #close {
+    position: relative;
+  }
+  #lightbox #viewer-frame nav {
+    position: relative;
+  }
+  #lightbox #viewer-frame button#close,
+  #lightbox #viewer-frame button#previous,
+  #lightbox #viewer-frame button#next {
+    background-color: #000000;
   }
 }
 
