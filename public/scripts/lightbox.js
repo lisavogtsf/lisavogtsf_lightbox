@@ -63,4 +63,5 @@ function changePhoto (n) {
 		}
 	}
 	console.error("selected photo not found");
+	return;
 }
