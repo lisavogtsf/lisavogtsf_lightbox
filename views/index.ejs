@@ -16,31 +16,36 @@
 
 	</head>
 <body>
-
-	<header>
-		<h1>lisavogtsf lightbox</h1>
-	</header>
-
 	<section>
-		<article id="thumbnail-frame">
-			<!-- load thumbnails from API here -->
-			<% for (var i = 0; i < photoUrls.length; i++) { %>
+		<article id="main">
+			<header>
+				<h1>lisavogtsf lightbox</h1>
+			</header>
+			<div id="thumbnail-frame">
+				<!-- load thumbnails from API here -->
+				<% for (var i = 0; i < photoUrls.length; i++) { %>
 
-				<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" onclick="openLightbox(event);"></div>
-			<% } %>
-
+					<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" onclick="openLightbox(event);"></div>
+				<% } %>
+			</div>
+			<footer>
+				<a href="http://lisavogtsf.github.io/">by Lisa Vogt, http://lisavogtsf.github.io/</a>
+			</footer>
 		</article>
 
-		<article id="viewer-frame" class="hide" onclick="closeLightbox();">
+		<article id="lightbox" class="hide">
 			<!-- when thumbnails is clicked, show a large version here -->
 			<!-- with the ability to move to the next / previous photos and display the photo title -->
-			<div id="viewer"></div>
+			<div id="viewer-frame" onclick="closeLightbox();">
+				<button id="close">X</button>
+				<div id="viewer"></div>
+				<nav>
+					<button id="previous">previous</button>
+					<button id="next">next</button>
+				</nav>
+			</div>
 		</article>
 	</section>
-
-	<footer>
-		<a href="http://lisavogtsf.github.io/">by Lisa Vogt, http://lisavogtsf.github.io/</a>
-	</footer>
 
 </body>
 </html>

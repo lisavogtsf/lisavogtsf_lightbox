@@ -1,61 +1,119 @@
 @primaryBackgroundColor: #000000;
 @frameColor: #101010;
+@accentColor: #DDDDDD;
 
 @import url(https://fonts.googleapis.com/css?family=Telex);
 
 body {
-	background-color: @primaryBackgroundColor;
-	margin: 0 auto;
-	padding: 10px;
 	font-family: 'Telex', sans-serif;
-	color: ivory;
+	color: @accentColor;
 	text-align: center;
 }
 
-#thumbnail-frame {
-	z-index: 0;
-	margin: 0 10% 10px;
-	display: flex;
-	justify-content: space-around;
-	align-content: space-around;
-	flex-wrap: wrap;
-
-	.thumbnail {
-		.aspect-ratio(1, 1);
-		width: 16%;
-		margin: 2%;
-		background-size: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: @frameColor;
-	}
-}
-
-#viewer-frame {
+#main {
 	&.hide {
 		display: none;
 	}
 	display: block;
-	z-index: 1;
-	margin: 0 10% 10px;
-	background-color: @frameColor;
-	position: absolute;
+	background-color: @primaryBackgroundColor;
+	margin: 0 auto;
+	padding: 10px;
+	
+	#thumbnail-frame {
+		z-index: 0;
+		margin: 0 10% 10px;
+		display: flex;
+		justify-content: space-around;
+		align-content: space-around;
+		flex-wrap: wrap;
 
-	#viewer {
-		background-color: @frameColor;
-		position: relative;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		padding: 2%;
-		margin: 5% auto;
+		.thumbnail {
+			.aspect-ratio(1, 1);
+			width: 16%;
+			margin: 2%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color: @frameColor;
+		}
+
+		footer {
+			margin: 20px auto 5px;
+		}
 	}
 }
 
 
-footer {
-	margin: 20px auto 5px;
+#lightbox {
+	&.hide {
+		display: none;
+	}
+	display: block;
+	table-layout: fixed;
+	background-color: @primaryBackgroundColor;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+
+	#viewer-frame {
+		z-index: 1;
+		display: block;
+		height: 80%;
+		width: 80%;
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		margin: 5%;
+
+		#viewer {
+			display: block;
+			background-color: @frameColor;
+			position: relative;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		#close {
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+
+		button {			
+			&#close,
+			&#previous,
+			&#next {
+				z-index: 2;
+				font-weight: bolder;
+				font-size: 1em;
+				background-color: @frameColor;
+				color: @accentColor;
+				vertical-align: middle;
+				border: none;
+				padding: 1em;
+			}
+		}
+	}
+	
 }
+
+
+/*****************/
+/*    mixins    */
+/*****************/
 
 // aspect ratio mixin
 .aspect-ratio(@width, @height) {
@@ -75,8 +133,9 @@ footer {
   }
 }
 
-
-// media queries
+/*****************/
+/* media queries */
+/*****************/
 
 // max thumbnail size, as many as fit
 @media screen 
