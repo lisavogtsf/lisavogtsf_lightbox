@@ -16,14 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-
-
-// 	var closeButton = document.querySelector('button#close');
-// console.log("closeButton", closeButton);
-// 	var nextButton = document.querySelector('button#next');
-// console.log("nextButton", nextButton);
-// 	var previousButton = document.querySelector('button#previous');
-// console.log("previousButton", previousButton);
 });
 
 
