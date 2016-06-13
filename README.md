@@ -12,6 +12,8 @@ To run the lightbox locally,
 	* add your own flickr key and secret to the '.env' file
 	`FLICKR_KEY=<your flickr key>`
 	`FLICKR_SECRET=<your flickr secret>`
+* run the express server `$npm start`
+* go to `http://localhost:3000/` in a web browser to view the page
 
 
 As per the assignment, this submission is: a web page that shows a grid of photo thumbnails; when a thumbnail is clicked [or tabbed to and 'enter' key is hit], the photo should be displayed in a lightbox view, with the ability to move to the next / previous photos and display the photo title. 
