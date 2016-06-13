@@ -5,6 +5,7 @@ This is a Javascript/HTML/CSS/LESS-only lightbox, viewable online at <https://li
 To run the lightbox locally,
 
 1. clone or copy the repository
+2. change directories into the repository `$ cd lisavogtsf_lightbox` or whatever you have named the repository locally
 * install node modules using `$ npm install`
 * set up environment variables locally using your Flickr API key and secret. 
 	* create a new '.env' file in the top level of the lisavogtsf_lightbox directory `$ touch .env`
