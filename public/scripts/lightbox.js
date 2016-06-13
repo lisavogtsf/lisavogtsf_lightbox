@@ -1,5 +1,32 @@
 // scripts for lightbox page dom interaction
 
+// once dom content is loaded, add event listeners
+document.addEventListener('DOMContentLoaded', function () {
+
+	// add event listeners to thumbnails for clicks and key presses
+	var thumbnailArray = document.querySelectorAll('.thumbnail');
+	for (var i = 0; i < thumbnailArray.length; i++) {
+		thumbnailArray[i].addEventListener('click', function (e) {
+			openLightbox(e);
+		});
+		// accept space bar or enter when thumbnail is selected
+		thumbnailArray[i].addEventListener('keydown', function (e) {
+			if (e.keyCode === 32 || e.keyCode === 13) {
+				openLightbox(e);
+			}
+		});
+	}
+
+
+// 	var closeButton = document.querySelector('button#close');
+// console.log("closeButton", closeButton);
+// 	var nextButton = document.querySelector('button#next');
+// console.log("nextButton", nextButton);
+// 	var previousButton = document.querySelector('button#previous');
+// console.log("previousButton", previousButton);
+});
+
+
 function openLightbox (e) {
 
 	// gather elements

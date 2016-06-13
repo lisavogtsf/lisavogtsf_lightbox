@@ -26,7 +26,7 @@
 				<!-- load thumbnails from API here -->
 				<% for (var i = 0; i < photoUrls.length; i++) { %>
 
-					<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-title="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" onclick="openLightbox(event);"></div>
+					<div style="background-image:url(<%= photoUrls[i] %>);" alt="<%= photos[i].title %>" data-title="<%= photos[i].title %>" data-order=<%= i %> class="thumbnail" tabindex="0"></div>
 				<% } %>
 			</div>
 			<footer>
