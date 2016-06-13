@@ -2,7 +2,17 @@
 
 This is a Javascript/HTML/CSS/LESS-only lightbox, viewable online at <https://lisavogtsf-lightbox.herokuapp.com/>
 
-I have no additional notes or instructions.
+To run the lightbox locally,
+
+1. clone or copy the repository
+* install node modules using `$ npm install`
+* set up environment variables locally using your Flickr API key and secret. 
+	* create a new '.env' file in the top level of the lisavogtsf_lightbox directory `$ touch .env`
+	* copy the contents of '.dot-env' into that new '.env' file
+	* add your own flickr key and secret to the '.env' file
+	`FLICKR_KEY=<your flickr key>`
+	`FLICKR_SECRET=<your flickr secret>`
+
 
 As per the assignment, this submission is: a web page that shows a grid of photo thumbnails; when a thumbnail is clicked [or tabbed to and 'enter' key is hit], the photo should be displayed in a lightbox view, with the ability to move to the next / previous photos and display the photo title. 
 
