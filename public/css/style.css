@@ -151,6 +151,21 @@ body {
   #main #thumbnail-frame #viewer-frame {
     margin: 0 7% 10px;
   }
+  #lightbox #viewer-frame {
+    margin: 2% 5%;
+    height: 76%;
+  }
+  #lightbox #viewer-frame #close {
+    position: relative;
+  }
+  #lightbox #viewer-frame nav {
+    position: relative;
+  }
+  #lightbox #viewer-frame button#close,
+  #lightbox #viewer-frame button#previous,
+  #lightbox #viewer-frame button#next {
+    background-color: #000000;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 600px) {
   #main #thumbnail-frame {

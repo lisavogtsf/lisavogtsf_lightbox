@@ -183,7 +183,7 @@ body {
 	}
 }
 
-// standard is five thumbnails across 600-1024
+// standard is five thumbnails across 600-1024, flip buttons out
 @media screen 
 	and (min-width: 600px)
 	and (max-width: 1024px) {
@@ -198,6 +198,29 @@ body {
 
 			#viewer-frame {
 				margin: 0 7% 10px;
+			}
+		}
+	}
+
+	#lightbox {
+		#viewer-frame {
+			margin: 2% 5%;
+			height: 76%;
+			
+			#close {
+				position: relative;
+			}
+
+			nav {
+				position: relative;
+			}
+			
+			button {
+				&#close,
+				&#previous,
+				&#next {
+					background-color: @primaryBackgroundColor;
+				}
 			}
 		}
 	}
